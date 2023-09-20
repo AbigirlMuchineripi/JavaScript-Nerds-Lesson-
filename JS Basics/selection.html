@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Selections and Booleans</title>
+</head>
+<body>
+    <h1>Testing Selections</h1>
+    <script>
+        
+        //Booleans
+        var red = true;
+        var blue = false;
+        var green ; //returns false because its undefined
+          //var green = null //returns false too
+          //var green = 0 // false
+        //var green = 1 // true
+         //var green = "cheese"//true
+
+         //Comparison(==|!=|<|>|>=|<=)
+         var myNum =  5;
+         var otherNum = 5;
+        // var notNum ="5";
+         var notNum = "chicken"
+         var myValue = notNum - myNum;
+
+
+
+       /* if(myValue){
+            //something happens
+            console.log("the statement is true");
+            console.log(myValue)//NaN/false/undefined...
+
+
+        }
+        else{
+            console.log("the statement is false");
+
+        }*/
+
+
+        //Else If
+
+       var colors =['red','green','blue','yellow'];
+        var selectedColor =colors[0]
+
+       /* if(selectedColor =='red'){
+           console.log ("the color is red")
+        }
+        else if(selectedColor=='green'){
+            console.log("the color is green")
+
+        }
+        else if(selectedColor=='blue'){
+            console.log("the color is blue")
+        }
+        else{
+            console.log("the color is yellow")
+        } */
+
+
+        //Switch  
+
+        //does the same as Else if stts
+        
+        /*switch(selectedColor){
+            case "red": console.log("the color is red"); break;
+            case "green": console.log("the color is green"); break;
+            case "blue": console.log("the color is blue"); break;
+            case "yellow": console.log("the color is yellow"); break;
+            default: console.log("there was an error"); 
+        }*/
+
+
+        // Using  &&
+       /* var goodMood =  true;
+        var gotSleep =  true;
+
+
+        if(goodMood && gotSleep){
+           console.log("Today is a good day");
+
+        }
+        else{
+            console.log("I am grumpy")
+        }
+        */
+
+        // Using ||
+        /*var gotBreakfast = false;
+        var gotLunch = false;
+        var gotDinner = false;
+
+        if(gotBreakfast || gotLunch ||gotDinner){
+            console.log("things are ok")
+        }
+        else{
+            console.log("Starving!")
+        }
+         */
+
+
+        //Loops
+
+        /*
+        for(var i = 0;         i<10;              i++){
+            initializer       condition         incrementor
+        }
+        */
+        
+
+        // Working with Arrays
+
+        var colors = ["red", "blue","yellow","green", "orange", "purple"]
+
+        for(var i = 0;  i < colors.length; i++){
+           // console.log(colors[i])
+        }
+
+
+        // The For .. of Loop
+        //  specifically works with arrays
+
+
+        for(var eachColor of colors){
+         // console.log(eachColor)  
+        }
+
+        //Strings As Arrays
+       
+       
+       /* var statement = " I love you";
+
+        for(var i =0; i< statement.length; i++){
+            console.log(statement[i] + '\n' )
+        }
+        // ||
+
+        for(var eachLetter of statement){
+            console.log(eachLetter + '\n' )
+        }*/
+
+        //While Loops using template literals
+        var incrementor = 0
+        var text =""
+
+        while(incrementor < 10){
+            text += `the incrementor is up to ${incrementor} \n`;
+            incrementor++
+        }
+
+       // console.log(text)
+
+
+        var i = 1;
+        var text ="";
+
+        while(i < 11){
+            text += `the incrementor is ${i}, the incrementor squared is ${i * i}\n`;
+            i++
+        }
+
+        //console.log(text)
+
+
+        //SEQUENCE, SELECTION and LOOP
+
+        var myString = "I am really hungry for some";
+        console.log(myString)
+
+        var myUpperString = myString.toUpperCase();
+        console.log(myUpperString)
+
+
+        //Sequence Part2
+
+        var reallyLocation = myString.search('really')
+
+        var specialWord = myString.substr(reallyLocation, 6)
+        //console.log(specialWord)
+        specialWord = specialWord.toUpperCase()
+        var newString = myString.replace('really',  specialWord)
+        console.log(newString)
+
+        //Sequence Part3
+        // create a foods array
+         //use string literal syntax to print outt a sentence that prints to the console the variable myString
+        //declared previously followed by a space and then the first element of foods array
+        
+        var foods= ['cheese', 'apples', 'sausages', 'pizza', 'juice']
+       var myString = "I am really hungry for some"
+      // console.log(`${myString} ${foods[0]}`)
+       //console.log(myString, foods[0])
+
+      // for(var i=0; i<foods.length; i++){
+      //  console.log(`${myString} ${foods[0]}`)
+      // }
+
+      for(var eachFood of foods){
+        //console.log(`${myString} ${eachFood}`)
+
+      }
+
+      //Loop + Selection
+      for(var i=0; i<foods.length; i++){
+       // var remainder = i % 2;
+
+       //Refactoring code
+       
+       //Checking if the incrementor is even
+        if(i % 2 === 0){      
+            console.log(`${myString} ${foods[i].toUpperCase()}`)
+        }
+        else {
+            console.log(`${myString} ${foods[i]}`);
+        }
+      
+      }
+            
+    </script>
+    
+</body>
+</html>
