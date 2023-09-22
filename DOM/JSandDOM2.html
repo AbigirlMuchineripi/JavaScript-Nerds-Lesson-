@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSandDOM</title>
+</head>
+<body>
+    <h1>Dom Examples</h1> 
+    <div>
+        <p>Here is a new paragraph</p>  
+        <p>hello people</p>    
+    
+    </div>
+    
+      
+    
+
+    
+
+    <form>
+        <label><input type="checkbox"> YES</label>
+        
+        
+    </form>
+    <script>
+        //Working with Properties Continuation
+
+    /*
+
+    // elements.style.color = "color name"
+     //methods have parenthesis properties use dots
+
+     //innerHTML
+     // use to change html inside any element on webpage
+
+     var myDiv = document.getElementById('special')
+     myDiv.innerHTML = "<p>Hello World!</p>"// returns one paragraph
+     //var myDiv document.querySelector('#special') gives the same output
+
+     document.querySelector('#special').innerHTML = "<p>Hello World!</p>"//same output here
+
+     //className
+     //allows to set the class or classes of an element
+
+     var firstParagraph = document.querySelector('p')
+     firstParagraph.className = "blue"// changefirst para to blue
+*/
+
+
+     //SetAtribute 
+     var myCheckbox = document.querySelector('input');
+     myCheckbox.setAttribute('checked', 'checked')
+
+
+     //Creating element and text nodes
+     //adding elements on webpage
+
+     var myTag= document.createElement('p')
+     var myText = document.createTextNode('Here is a new paragraph')
+     myTag.appendChild(myText);
+     var myDiv = document.querySelector('div')
+     myDiv.appendChild(myTag)
+
+     
+     //Removing Elements
+     //removeChild()
+     var myDiv = document.querySelector('div')
+     myDiv.removeChild(myDiv.children[1]);
+
+     
+
+     
+
+
+
+
+
+
+
+    </script>
+   
+
+
+    
+</body>
+</html>
